@@ -47,7 +47,7 @@
 <div class="brand"><img src="Logo三ツ目2nd完成透過.png" alt="三ツ目珈琲"></div>
 <header>
   <h1>壊れ物報告</h1>
-  <div class="sub"><span id="userName"></span> さん</div>
+  <div class="sub">Mitsume Coffee</div>
 </header>
 
 <div id="loading">読み込み中…</div>
@@ -184,7 +184,6 @@
       if (!liff.isLoggedIn()) { liff.login(); return; }
       var profile = await liff.getProfile().catch(function () { return { displayName: '' }; });
       state.name = profile.displayName || '';
-      $('userName').textContent = state.name;
       $('loading').classList.add('hidden');
       $('main').classList.remove('hidden');
       $('footer').classList.remove('hidden');
